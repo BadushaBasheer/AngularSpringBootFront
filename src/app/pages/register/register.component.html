@@ -1,0 +1,55 @@
+<div class="container vh-100 d-flex align-items-center justify-content-center">
+    <div class="card bg-transparent border-0 shadow-lg card-blur">
+        <div class="card-body px-xl-5">
+            <div class="text-center">
+                <mat-icon class="mat-3x">person</mat-icon>
+                <h2>Register</h2>
+                <p>Please fill in the registration details</p>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="mb-2"> <!-- Reduced margin -->
+                        <mat-form-field class="w-100" appearance="outline" color="warn">
+                            <mat-label>Name</mat-label>
+                            <input matInput type="text" id="name" [(ngModel)]="name" name="name" required/>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-2"> <!-- Reduced margin -->
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>User Name</mat-label>
+                            <input matInput type="text" id="username" [(ngModel)]="username" name="username" required/>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="mb-2"> <!-- Reduced margin -->
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Select Gender</mat-label>
+                        <mat-select id="gender" [(ngModel)]="gender" name="gender">
+                            <mat-option value="">Select Gender</mat-option>
+                            <mat-option value="male">Male</mat-option>
+                            <mat-option value="female">Female</mat-option>
+                            <mat-option value="other">Other</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="mb-2"> <!-- Reduced margin -->
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" id="email" [(ngModel)]="email" name="email" required/>
+                    </mat-form-field>
+                </div>
+                <div class="mb-2">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" id="password" [(ngModel)]="password" name="password" required/>
+                    </mat-form-field>
+                </div>
+                <button type="submit" mat-button class="w-100 cs-button" (click)="register()">Register</button>
+            </form>
+
+        </div>
+        <div class="card-footer text-end mb-3">
+            <a routerLink="../login">Already have an account? Login here</a>
+        </div>
+    </div>
+</div>

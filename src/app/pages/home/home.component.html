@@ -1,0 +1,43 @@
+<mat-toolbar class="my-custom-color">
+    <span>{{ title }}</span>
+    <span class="spacer"></span>
+    <button type="submit" (click)="logoutUser()" mat-icon-button class="logout-icon" aria-label="logout"
+            matTooltip="Logout">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="row">
+            <mat-card >
+                <mat-card-header class="text-center">
+                    <mat-card-title>Profile Information<hr>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="mb-3">
+                        <label class="form-label">Name:</label>
+                         <span class="form-control">username</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Username:</label>
+                        <!-- <span class="form-control">{{ profile.email }}</span> -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gender:</label>
+                        <!-- <span class="form-control">{{ profile.email }}</span> -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email:</label>
+                        <!-- <span class="form-control">{{ profile.email }}</span> -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password:</label>
+                        <!-- <span class="form-control">{{ profile.email }}</span> -->
+                    </div>
+                    <!-- Add more details as needed -->
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+</div>

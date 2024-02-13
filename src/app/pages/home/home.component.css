@@ -1,0 +1,9 @@
+.spacer {
+    flex: 1 1 auto;
+}
+.mat-toolbar.my-custom-color {
+    font-family: "Arial Rounded MT Bold", serif;
+    background-color: #74941b;
+    color: #ffffff;
+}
+

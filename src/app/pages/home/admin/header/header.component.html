@@ -1,0 +1,49 @@
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
+<!--  <div class="container-fluid">-->
+<!--    <a class="navbar-brand" routerLink="./home">{{ title }}</a>-->
+<!--    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"-->
+<!--            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarResponsive">-->
+<!--      <ul class="navbar-nav ms-auto">-->
+<!--        <li class="nav-item" routerLinkActive="active">-->
+<!--          <a class="nav-link" routerLink="./home">Home</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item ps-3" routerLinkActive="active">-->
+<!--          <form class="form-inline my-2 my-lg-0">-->
+<!--            <input type="search" (ngModelChange)="searchUserMethod(key.value)" #key="ngModel" ngModel-->
+<!--                   name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search users..." required>-->
+<!--          </form>-->
+<!--        </li>-->
+<!--        <li class="nav-item ps-4">-->
+<!--          <a class="nav-link btn btn-primary text-white" (click)="logoutAdmin()" role="button">Logout</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+<mat-toolbar color="primary"> <mat-toolbar-row>
+    <a mat-button routerLink="/home">{{ title }}</a> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Open menu">
+    <mat-icon>menu</mat-icon> </button>
+    <mat-menu #menu="matMenu"> <a mat-menu-item routerLink="/home">Home</a>
+        <button mat-button [matMenuTriggerFor]="menu">
+            Search Users
+        </button>
+        <button mat-button [matMenuTriggerFor]="menu">
+            Search Users
+        </button>
+        <mat-menu #menu="matMenu">
+            <ng-container *ngIf="true"> <!-- Add your condition here -->
+                <mat-form-field appearance="fill">
+                    <mat-label>Search users...</mat-label>
+                    <input matInput type="search" [(ngModel)]="searchKey" (click)="$event.stopPropagation()">
+                </mat-form-field>
+            </ng-container>
+        </mat-menu>
+
+
+        <a mat-menu-item (click)="logoutAdmin()">Logout</a>
+    </mat-menu>
+</mat-toolbar-row>
+</mat-toolbar>
